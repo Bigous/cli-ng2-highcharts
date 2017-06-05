@@ -1,6 +1,21 @@
-# TestMoniuch
+# Angular-Cli ng2-highcharts example project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+
+## Steps to generate this project
+
+```bash
+# Install @angular/cli and yarn globaly
+npm install -g @angular/cli@1.1.0 yarn@0.24.5
+# Generate the project
+ng new cli-ng2-highcharts
+# Enter the directory
+cd cli-ng2-highcharts
+# Add ng2-highcharts and highcharts as a dependency
+yarn add ng2-highcharts@1.0.0 highcharts@4.x.x
+# Edit the files as in the commits in this repository and serve with the cli
+ng serve
+```
 
 ## Development server
 

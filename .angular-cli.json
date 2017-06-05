@@ -21,7 +21,11 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/highcharts/highstock.js",
+        "../node_modules/highcharts/modules/map.js",
+        "../node_modules/highcharts/modules/data.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
