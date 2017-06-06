@@ -314,7 +314,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         };
       },
       (err: any) => {
-        console.error('Somethin went wrong', err);
+        console.error('Something went wrong', err);
       }
     );
 
@@ -322,6 +322,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.http.get('./assets/world.geo.json').subscribe(
       (geojson: any) => {
         this.chartMap = {
+          chart:{
+            map: geojson.json() // for highcharts v5.x.x
+          },
           title: {
             text: 'Highmaps basic demo'
           },
@@ -337,7 +340,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           },
           series: [{
             data: this.mapData,
-            mapData: geojson.json(),
+            mapData: geojson.json(), // for highcharts v4.x.x
             joinBy: ['hc-key', 'code'],
             name: 'Random data',
             states: {
@@ -353,7 +356,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         };
       },
       (err: any) => {
-        console.error('Somethin went wrong', err);
+        console.error('Something went wrong', err);
       }
     );
   }
